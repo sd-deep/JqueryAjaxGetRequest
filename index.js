@@ -1,5 +1,8 @@
 $(document).ready(()=>{
-    getAllData();
+    $('#get-data').click(()=>{
+        getAllData();
+    });
+   
 });
 
 let getAllData = ()=>{
@@ -29,7 +32,19 @@ let getAllData = ()=>{
         
         error : (data) => {
             alert("something went wrong")
-        }
+        },
+
+        beforeSend : () =>{
+
+
+        },
+
+        complete : () => {
+
+
+        },
+        
+        timeout:2000
     });
 
 }
